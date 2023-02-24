@@ -1,4 +1,4 @@
-# 2022_lol_comp_data_analysis
+# 2022 LOL Competitive Match Analysis
 
 ## Introduction and Question Identification
 The dataset we are working with contains statistics from all of the Official 2022 League of Legends Competitive Matches. League of Legends has the biggest esports scene of any game with its annual events racking in millions of viewers all over the world. We set out to find interesting trends to learn more about how teams win in such a competitive game. While asking and exploring many different ideas, we landed on the leading question of: **Do high action teams tend to win more.** Action is a fairly arbitrary term, so we decided to put our definition of action as a weighted summation of kills, kill assists, and damage per minute done by each player on a team, then averaged it across the team. The initial dataset has 149232 rows and 123 columns. The row count is semi-inflated, because there are 12 rows for each game, to represent each player's statistic in a 10 person game, as well as each team's statistics. 
@@ -27,10 +27,11 @@ This dataset is not perfect, as such we to clean it before we can use it. For on
 We also split our data into two dataframes, one with the data from the team's performance in the game (participantid = 100|200), and with the data from the player's perfomrance in each game. We had to further clean the dataframe about the teams to remove the playername column from it, as they ended up all being NaN, as they are Missing by Design(MD) 
 
 ### Univariate analysis
-<iframe src="assets/game_length_distributions.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/game_length_distribution.html" width=800 height=600 frameBorder=0></iframe>
+We decided to graph distribution of the length of the games(seconds) using a histogram. We see that the distribution of game lengths was roughly normal throughout the year, though slightly more skewed for longer games than shorter ones. 
 
 <iframe src="assets/kills_distribution.html" width=800 height=600 frameBorder=0></iframe>
-
+We also decided to graph the distribution for the number of kills in a game using a histogram. We can observe from this that it has double peaks and is slightly skewed toward more kills. 
 
 ## Assessment of Missingness 
 
