@@ -48,6 +48,8 @@ For the other bivariate analysis, we wanted to look at how a team's winrate chan
 
 ## Interesting Aggregates
  
+<iframe src="assets/team_wr_side_pivot.html" width=800 height=600 frameBorder=0></iframe>
+
 We made a pivot table comparing the winrates of teams split between when they got blue side and when they got red side. Though it may seem irrelevant which side you get, League of Legends is not perfectly balanced between the two sides you can roll, and there have been arguments even recently about whether one side has an unfair advantage or not in professional play. Here we can see that some teams have drastically different winrates, depending on the side they play on. The circuits try to balance this by giving side selection to each team once, by coin toss, or by seeding. 
 
 ## Assessment of Missingness 
