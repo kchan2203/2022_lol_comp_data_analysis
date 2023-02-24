@@ -17,14 +17,14 @@ Columns in this large dataset that are relevant to our analysis and that are imp
 10. kills: the amount of kills the individual/team gets
 11. assists: the amount of assists the individual/team gets (an assist is obtained when someone assists the person getting the kill, either by helping with dealing damage, or supporting them)
 12. dpm: damage dealt to enemy players over the amount of minutes in the game.
-13. monsterkillsownjungle: the amount of monsters that are killed on the side of the map belonging to their own team. 
+13. monsterkillsownjungle: the amount of monsters that are killed on the side of the map belonging to their own team. These have values kept as NaN for our missingness test. 
 
 ## Cleaning and EDA
 
 ### Data Cleaning
 This dataset is not perfect, as such we to clean it before we can use it. For one, there were many NaN values in this dataset. However, they were in columns that we did not use. The dataset has a lot of information and statistics in it, more than we used in our analysis. So we will trim down the amount of columns we are working with to the 13 we listed above. This got rid of all of the NaN values, and made our workspace cleaner. Additionally, we had the column result that was in 0 and 1s, which we changed to True/False.
 
-We also split our data into two dataframes, one with the data from the team's performance in the game (participantid = 100|200), and with the data from the player's perfomrance in each game. We had to further clean the dataframe about the teams to remove the playername column from it, as they ended up all being NaN, as they are Missing by Design(MD) 
+We also split our data into two dataframes, one with the data from the team's performance in the game (participantid = 100/200), and with the data from the player's perfomrance in each game. We had to further clean the dataframe about the teams to remove the playername column from it, as they ended up all being NaN, as they are Missing by Design(MD) 
 
 **Team DataFrame**
 <iframe src="assets/teams_df_head.html" width=800 height=600 frameBorder=0></iframe>
@@ -32,13 +32,25 @@ We also split our data into two dataframes, one with the data from the team's pe
 **Players DataFrame**
 <iframe src="assets/players_df_head.html" width=800 height=600 frameBorder=0></iframe>
 
-### Univariate analysis
+### Univariate Analysis
 <iframe src="assets/game_length_distribution.html" width=800 height=600 frameBorder=0></iframe>
 We decided to graph distribution of the length of the games(seconds) using a histogram. We see that the distribution of game lengths was roughly normal throughout the year, though slightly more skewed for longer games than shorter ones. 
 
 <iframe src="assets/kills_distribution.html" width=800 height=600 frameBorder=0></iframe>
 We also decided to graph the distribution for the number of kills in a game using a histogram. We can observe from this that it has double peaks and is slightly skewed toward more kills. 
 
+### Bivariate Analysis
+<iframe src="assets/wr_vs_time.html" width=800 height=600 frameBorder=0></iframe>
+We decided to graph a team's average game length vs the team's average winrate in a scatter plot to see if there is a correlation. We see here that there is no strong correlation in a team's average game time affecting that team's winrate. So we decided to not proceed with this question
+
+<iframe src="assets/wr_vs_patch.html" width=800 height=600 frameBorder=0></iframe>
+For the other bivariate analysis, we wanted to look at how a team's winrate changes in every version of the game in a line graph, since patches can be represented as periods of time. It gave us an idea of a team's performance throughout the year, and how the state of game balance affected them. 
+
+##Interesting Aggregates
+ 
+We made a pivot table comparing the winrates of teams split between when they got blue side and when they got red side. Though it may seem irrelevant which side you get, League of Legends is not perfectly balanced between the two sides you can roll, and there have been arguments even recently about whether one side has an unfair advantage or not in professional play. Here we can see that some teams have drastically different winrates, depending on the side they play on. The circuits try to balance this by giving side selection to each team once, by coin toss, or by seeding. 
+
 ## Assessment of Missingness 
+
 
 ## Hypothesis Testing
