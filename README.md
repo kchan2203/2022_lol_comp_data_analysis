@@ -44,12 +44,13 @@ We also decided to graph the distribution for the number of kills in a game usin
 We decided to graph a team's average game length vs the team's average winrate in a scatter plot to see if there is a correlation. We see here that there is no strong correlation in a team's average game time affecting that team's winrate. So we decided to not proceed with this question
 
 <iframe src="assets/wr_vs_patch.html" width=800 height=600 frameBorder=0></iframe>
+(For a better viewing experience, double click one of the teams to only see that team's winrate graphed, instead of all of them by default)
+
 For the other bivariate analysis, we wanted to look at how a team's winrate changes in every version of the game in a line graph, since patches can be represented as periods of time. It gave us an idea of a team's performance throughout the year, and how the state of game balance affected them. 
 
 ## Interesting Aggregates
  
 <iframe src="assets/team_wr_side_pivot.html" width=800 height=600 frameBorder=0></iframe>
-(For a better viewing experience, double click one of the teams to only see that team's winrate graphed, instead of all of them by default)
 
 We made a pivot table comparing the winrates of teams split between when they got blue side and when they got red side. Though it may seem irrelevant which side you get, League of Legends is not perfectly balanced between the two sides you can roll, and there have been arguments even recently about whether one side has an unfair advantage or not in professional play. Here we can see that some teams have drastically different winrates, depending on the side they play on. The circuits try to balance this by giving side selection to each team once, by coin toss, or by seeding. 
 
