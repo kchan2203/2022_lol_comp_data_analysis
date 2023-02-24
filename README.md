@@ -26,6 +26,12 @@ This dataset is not perfect, as such we to clean it before we can use it. For on
 
 We also split our data into two dataframes, one with the data from the team's performance in the game (participantid = 100|200), and with the data from the player's perfomrance in each game. We had to further clean the dataframe about the teams to remove the playername column from it, as they ended up all being NaN, as they are Missing by Design(MD) 
 
+**Team DataFrame**
+<iframe src="assets/teams_df_head.html" width=800 height=600 frameBorder=0></iframe>
+
+**Players DataFrame**
+<iframe src="assets/players_df_head.html" width=800 height=600 frameBorder=0></iframe>
+
 ### Univariate analysis
 <iframe src="assets/game_length_distribution.html" width=800 height=600 frameBorder=0></iframe>
 We decided to graph distribution of the length of the games(seconds) using a histogram. We see that the distribution of game lengths was roughly normal throughout the year, though slightly more skewed for longer games than shorter ones. 
