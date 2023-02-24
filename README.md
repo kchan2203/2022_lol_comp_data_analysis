@@ -54,3 +54,13 @@ We made a pivot table comparing the winrates of teams split between when they go
 
 
 ## Hypothesis Testing
+**Our Null Hypothesis:** "In our population, ACS of teams that tend to win vs teams that tend to lose have the same distribution and any differences in our samples are due to random chance" 
+**Alternative hypothesis:** "In our population, the ACS of teams that tend to win are higher compared to teams that tend to lose and any differences cannot be explained by random chance."
+<iframe src="assets/acs_by_groups_hist.html" width=800 height=600 frameBorder=0></iframe>
+
+We decided to use a difference in group means where the groups are high and low. High means that the winrate is higher than or equal to 50% or 0.5, while low is lower than a 50% winrate. We set our significance level to 0.01. After running a permutation test, we got a p-value of 0. The p-value tells us that there is close to a 0% chance that the difference in acs between high and low winrate teams is just due to random chance. Since our significance level is 0.01, we reject the null hypothesis that the high and low winrate teams were drawn from the same distribution for acs. Using a difference in group means is a good choice because the visualization of the distributions of ACS between high and low win rate teams show that their centers are quite different. A real difference in group means that there is evidence that teams with higher ACS also have higher win rates.
+
+<iframe src="assets/Group_Means_in_ACS.html" width=800 height=600 frameBorder=0></iframe>
+The red line represents our observed statistic, while the histogram represents the plot of the 1000 test statistis we made from the random permutation test. As you can see there are no generated test statistics that are either more extreme or equal to our observed test statistic. 
+
+
