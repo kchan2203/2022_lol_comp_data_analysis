@@ -48,7 +48,7 @@ We decided to graph a team's average game length vs the team's average winrate i
 
 For the other bivariate analysis, we wanted to look at how a team's winrate changes in every version of the game in a line graph, since patches can be represented as periods of time. It gave us an idea of a team's performance throughout the year, and how the state of game balance affected them. 
 
-## Interesting Aggregates
+### Interesting Aggregates
  
 <iframe src="assets/team_wr_side_pivot.html" width=800 height=600 frameBorder=0></iframe>
 
