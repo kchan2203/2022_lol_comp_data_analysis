@@ -55,6 +55,22 @@ For the other bivariate analysis, we wanted to look at how a team's winrate chan
 We made a pivot table comparing the winrates of teams split between when they got blue side and when they got red side. Though it may seem irrelevant which side you get, League of Legends is not perfectly balanced between the two sides you can roll, and there have been arguments even recently about whether one side has an unfair advantage or not in professional play. Here we can see that some teams have drastically different winrates, depending on the side they play on. The circuits try to balance this by giving side selection to each team once, by coin toss, or by seeding. 
 
 ## Assessment of Missingness 
+Assessment of Missingness
+We do not believe that there are columns that are NMAR, which means there doesn’t seem to be any columns that are missing based on the value of missingness itself. Actually many of the columns are missing by design because they do not apply to that row. For example, there are rows that are made up of aggregated team stats during a game, while there are rows that represent the stats of an individual player during a game. This results in certain statistics not making sense for player or team rows. Therefore, there will be missing values in playername for team rows and the same applies for many other NaNs values.
+
+To see if we could use monsterkillsownjungle column for our calculation of ACS, we wanted to test its missingness. If the value was missing depending on a certain column, it could affect the ACS calculation and be a bad indicator of ACS. 
+First, we performed a missingness permutation test on the kills. Both of our permutation tests have a significance value of 0.01. Our null hypothesis would be the distribution of ‘kills’ when ‘monsterkillsownjungle’ is missing the the same as the distribution of ‘kills’ when the ‘monsterkillsownjungle’ is not missing
+
+<iframe src="assets/hist_kills_by_missing.html" width=800 height=600 frameBorder=0></iframe>
+
+Since the centers of kills between rows with missing monsterkillsownjungle and rows without missing values for monsterkillsownjungle is so similar, it would be better to compare the distribution of values. Therefore, we will be using a KS statistic. 
+The p-value we eventually ended up with 0.4075. We fail to reject the null hypothesis due to 0.01 < 0.4075, so it seems like the ‘monsterkillsownjungle’ column is not dependent on ‘kills’. Therefore, the ‘monsterkillsownjungle’ column, according to this test, seems to be missing completely at random
+
+Next, we performed a missingness permutation test on league(aka region). Our null hypothesis would be that the proportion of missingness in ‘monsterkillsownjungle’ is the same across all leagues. Our null hypothesis is that the proportion of missingness is different across different leagues. Since we are using proportions, we will use a TVD as our test statistic
+
+<iframe src="assets/bar_region_missingness.html" width=800 height=600 frameBorder=0></iframe>
+
+Our p-value is 0. We reject the null hypothesis due to 0.01 > 0.0, so it seems like the ‘monsterkillsownjungle’ column is dependent on ‘league. Therefore, the ‘monsterkillsownjungle’ column seems to be MAR according to this test.
 
 
 ## Hypothesis Testing
