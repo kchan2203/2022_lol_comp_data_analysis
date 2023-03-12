@@ -1,8 +1,8 @@
 # 2022 LOL Competitive Match Analysis
 
 ## Analyst Info
-Kevin Chan: <a href = "https://www.linkedin.com/in/kevin-chan-a832b9255/"> Linkedin </a>
-
+Kevin Chan: <a href = "https://www.linkedin.com/in/kevin-chan-a832b9255/"> Linkedin </a> | <a href = "https://github.com/kchan2203"> Github </a>
+Calvin Nguyen: <a href = "https://www.linkedin.com/in/calvin-nguyen-1089b51a1/"> Linkedin </a> | <a href = "https://github.com/Neniflight"> Github </a>
 
 ## Introduction and Question Identification
 The dataset we are working with contains statistics from all of the Official 2022 League of Legends Competitive Matches. League of Legends has the biggest esports scene of any game with its annual events racking in millions of viewers all over the world. We set out to find interesting trends to learn more about how teams win in such a competitive game. While asking and exploring many different ideas, we landed on the leading question of: **Do high action teams tend to win more?** Action is a fairly arbitrary term, so we decided to put our definition of action as a weighted summation of kills, kill assists, and damage per minute done by each player on a team, then averaged it across the team. The initial dataset has 149232 rows and 123 columns. The row count is semi-inflated, because there are 12 rows for each game, to represent each player's statistic in a 10 person game, as well as each team's statistics. 
