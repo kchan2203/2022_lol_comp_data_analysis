@@ -2,6 +2,7 @@
 
 ## Analyst Info
 Kevin Chan: <a href = "https://www.linkedin.com/in/kevin-chan-a832b9255/"> Linkedin </a> | <a href = "https://github.com/kchan2203"> Github </a>
+
 Calvin Nguyen: <a href = "https://www.linkedin.com/in/calvin-nguyen-1089b51a1/"> Linkedin </a> | <a href = "https://github.com/Neniflight"> Github </a>
 
 ## Introduction and Question Identification
